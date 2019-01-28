@@ -2,15 +2,15 @@
 # onlineshopping-cart
 Online Shopping cart is a simple component used to creat a Shopping-Cart which is designed in angular.
 <p align="center">
-    <img  alt="Register" src="Loginpage.PNG" class="img-responsive">
+    <img  alt="Register" src="Images/rigister.PNG">
 </p>
 <p align="center">
-    <img  alt="Register" src="rigister.PNG" class="img-responsive">
+    <img  alt="Login" src="Images/Loginpage.PNG">
 </p>
 <p align="center">
-    <img  alt="Register" src="cart.PNG" class="img-responsive">
+    <img  alt="Cartpage" src="Images/cart.PNG">
 </p>
-To preview demo of Dynamic form creation by using FireBase DataBase Component, [Click here](https://angular-m8zxed.stackblitz.io/)
+To preview demo of Dynamic form creation by using FireBase DataBase Component, [Click here](https://angulso8qjg.stackblitz.io/products/)
 ## Using the complete angular component
 Download the src folder from Online Shopping-Cart folder and install the required packages and run the application.
 
