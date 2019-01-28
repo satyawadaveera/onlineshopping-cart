@@ -30,7 +30,7 @@ Download the src folder from Online Shopping-Cart folder and install the require
  Download the Online Shopping-Cart component from Online Shopping-Cart/src/app folder to your angular project and include required components from angular.
 
 ```
-### ImagesJsonFormate Interface
+### Onlineshopping-cart FireBase Interface
 
 ```typescript
 ```
