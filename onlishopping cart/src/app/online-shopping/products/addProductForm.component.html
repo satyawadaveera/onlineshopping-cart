@@ -1,0 +1,88 @@
+
+<div class="outer" *ngIf="formShow">
+	<div class="container">
+		<h2 style="color:#333">Add products</h2>
+		<form #productsForm="ngForm" (ngSubmit)="add(productsForm.value)">
+			<div class="form-group">
+				<label for="pimage">Product Image</label>
+				<input type="url" placeholder="image url" class="form-control" id="pimage" required [(ngModel)]="prod.pimage" name="pimage"
+				 #pimage="ngModel">
+				<div *ngIf="pimage.touched && pimage.errors">
+					<div class="alert alert-danger" *ngIf="pimage.errors.required">
+						pimage is required
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="pname">pname</label>
+				<input placeholder="enter pname" type="text" class="form-control" id="pname" required [(ngModel)]="prod.pname" name="pname"
+				 #pname="ngModel" minlength="3">
+
+				<div *ngIf="pname.touched && pname.errors">
+					<div class="alert alert-danger" *ngIf="pname.errors.required">
+						Email is required
+					</div>
+					<div class="alert alert-danger" *ngIf="pname.errors.minlength">
+						min 3 characters
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="pcode">pcode</label>
+				<input placeholder="enter pcode" type="text" class="form-control" id="pcode" required [(ngModel)]="prod.pcode" name="pcode"
+				 #pcode="ngModel" minlength="3">
+
+				<div *ngIf="pcode.touched && pcode.errors">
+					<div class="alert alert-danger" *ngIf="pcode.errors.required">
+						pcode is required
+					</div>
+					<div class="alert alert-danger" *ngIf="pcode.errors.minlength">
+						min 3 characters
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="pavailiable">pavailiable</label>
+				<input placeholder="enter pavailiable" type="text" class="form-control" id="pavailiable" required [(ngModel)]="prod.pavailiable"
+				 name="pavailiable" #pavailiable="ngModel">
+
+				<div *ngIf="pavailiable.touched && pavailiable.errors">
+					<div class="alert alert-danger" *ngIf="pavailiable.errors.required">
+						pavailiable is required
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="pprice">pprice</label>
+				<input placeholder="enter pprice" type="number" class="form-control" id="pprice" required [(ngModel)]="prod.pprice" name="pprice"
+				 #pprice="ngModel">
+
+				<div *ngIf="pprice.touched && pprice.errors">
+					<div class="alert alert-danger" *ngIf="pprice.errors.required">
+						pprice is required
+					</div>
+				</div>
+			</div>
+
+
+			<div class="form-group">
+				<label for="prating">prating</label>
+				<input placeholder="enter prating" type="number" class="form-control" id="prating" required [(ngModel)]="prod.prating" name="prating"
+				 #prating="ngModel">
+
+				<div *ngIf="prating.touched && prating.errors">
+					<div class="alert alert-danger" *ngIf="prating.errors.required">
+						prating is required
+					</div>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-primary" [disabled]='!productsForm.form.valid'>Add</button>
+		</form>
+
+
+	</div>
+
+</div>

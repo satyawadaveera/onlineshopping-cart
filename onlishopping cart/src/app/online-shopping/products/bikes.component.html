@@ -1,0 +1,62 @@
+<div class="container">
+	<div class="panel-group">
+		<div class="panel grey">
+			<div class="panel-heading font-size-medium">Bikes</div>
+			<div class="panel-body">
+				<div>
+					<button class="btn btn-primary" (click)="addProducts('bikes')">add product</button>
+				</div>
+				<table class="table table-stripped grey">
+					<thead>
+						<td>
+							<tr>product Image</tr>
+						</td>
+						<td>
+							<tr>product</tr>
+						</td>
+						<td>
+							<tr>code</tr>
+						</td>
+						<td>
+							<tr>available</tr>
+						</td>
+						<td>
+							<tr>price</tr>
+						</td>
+						<td>
+							<tr>qty</tr>
+						</td>
+						<td>
+							<tr>rating</tr>
+						</td>
+						<td>
+							<tr>delete</tr>
+						</td>
+						<td>
+							<tr>select</tr>
+						</td>
+					</thead>
+
+					<tbody>
+						<tr *ngFor="let x of bikesList
+;index as i">
+							<td><img class="show" src={{x.pimage}}></td>
+							<td>{{x.pname}}</td>
+							<td>{{x.pcode}}</td>
+							<td>{{x.pavailiable}}</td>
+							<td>{{x.pprice}}</td>
+							<td>{{x.qty}}</td>
+							<td><span>{{x.prating}}</span></td>
+							<td><button class="btn remove" (click)="removeProduct(x.$key,'bikes')">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button></td>
+							<td><button class="btn" (click)="AddToCart(x.pimage,x.pname,x.pcode,x.pavailiable,x.pprice,x.qty,x.prating)">add to cart</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<app-addProduct *ngIf="addProduct" [categoryProduct]="category"></app-addProduct>

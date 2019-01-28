@@ -1,0 +1,59 @@
+<div class="container text-center" *ngIf="login">
+	<a routerLink='products/bikes'>bikes</a>
+	<a routerLink='products/mobiles'>mobiles</a>
+	<a routerLink='products/shoes'>shoes</a>
+</div>
+<!-- {{credentials}} -->
+<div *ngIf="login==false">please login first</div>
+<router-outlet></router-outlet>
+<div>
+  <div class="panel-group">
+    <div class="panel panel-success">
+      <div class="panel-heading">Cart</div>
+      <div class="panel-body">
+	<table class="table table-stripped grey">
+		<thead>
+			<td>
+				<tr>product Image</tr>
+			</td>
+			<td>
+				<tr>product</tr>
+			</td>
+			<td>
+				<tr>code</tr>
+			</td>
+			<td>
+				<tr>available</tr>
+			</td>
+			<td>
+				<tr>price</tr>
+			</td>
+			<td>
+				<tr>rating</tr>
+			</td>
+			<td>
+				<tr>delete</tr>
+			</td>
+		</thead>
+
+		<tbody>
+			<tr *ngFor="let x of cartList;">
+				<!-- <td><button (click)="plus(a)" class="glyphicon glyphicon-plus btn"></button><span>{{x.qty}}</span><button (click)="minus(a)"
+					 class="glyphicon glyphicon-minus btn"></button></td> -->
+				<td><img src={{x.pimage}}></td>
+				<td>{{x.pname}}</td>
+				<td>{{x.pcode}}</td>
+				<td>{{x.pavailiable}}</td>
+				<td>{{x.pprice}}</td>
+				<td><span>{{x.prating}}</span></td>
+				<td><button class="btn btn-primary" (click)="removeProductCart(x.$key)">
+          <span class="glyphicon glyphicon-remove"></span>
+        </button></td>
+			</tr>
+		</tbody>
+	</table>
+  <!-- <div class="totalBill">Total cost : <i class="fa fa-rupee"></i>{{totalCost | number:'5.2-2'}}</div> -->
+	<!-- <div><button class="btn btn-primary bt" (click)="bill()">totalBill</button></div> *ngIf="billAmount"-->
+  <!-- </div> -->
+    </div>
+</div>

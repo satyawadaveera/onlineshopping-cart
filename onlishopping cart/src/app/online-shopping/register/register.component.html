@@ -1,0 +1,24 @@
+<span class="bg-primary  label label-default">Registration Page</span>
+<form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+
+<input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="shoppingCart.selectedCredential.$key">
+
+	<div class="form-group">
+		<label>Username</label>
+		<input class="form-control" name="username" #UserName="ngModel" [(ngModel)]="shoppingCart.selectedCredential.username" placeholder="Username" required>
+	</div>
+
+	<div class="form-group">
+		<label>Password</label>
+		<input class="form-control" name="password" #Password="ngModel" [(ngModel)]="shoppingCart.selectedCredential.password" placeholder="Password"required>
+	</div>
+
+	<div class="form-group">
+		<label>Email</label>
+		<input class="form-control" name="email" #Email="ngModel" [(ngModel)]="shoppingCart.selectedCredential.email" placeholder="Email"required>
+	</div>
+
+	<div class="form-group">
+		<button type="submit" class="btn btn-default" [disabled]="!registerForm.valid"><i class="far  fa-save"></i>Submit</button>
+	</div>
+</form>

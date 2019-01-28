@@ -1,0 +1,35 @@
+<!-- <div class="container text-center" style="float:left;height:100%;"> -->
+  <div class="jumbotron text-center">
+		<h2>Online Shopping</h2></div>
+	<div class="text-center">
+<!-- 	</div>
+	<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+		<ul class="navbar-nav">
+			<li class="nav-item active">
+				<a class="nav-link" routerLink='login' *ngIf="loginLogout">login</a><br>
+			</li>
+      <li class="nav-item active">
+				<a class="nav-link" routerLink='login' *ngIf="!loginLogout">logout</a><br>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" routerLink='register'>register</a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" routerLink='products'>products</a>
+			</li>
+		</ul>
+	</nav> -->
+<!-- </div> -->
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a class="nav-link" routerLink='login' *ngIf="loginLogout">Login</a></li>
+      <li><a class="nav-link" routerLink='login' *ngIf="!loginLogout">Logout</a></li>
+      <li><a class="nav-link" routerLink='register'>Register</a></li>
+      <li><a class="nav-link" routerLink='products'>Products</a></li>
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>
